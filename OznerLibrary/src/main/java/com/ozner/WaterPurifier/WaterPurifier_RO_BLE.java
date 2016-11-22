@@ -356,6 +356,7 @@ public class WaterPurifier_RO_BLE extends WaterPurifier {
                 rep.Firmware = new Date(Service_Data[3] + 2000 - 1900, Service_Data[4] - 1,
                         Service_Data[5], Service_Data[6],
                         Service_Data[7], Service_Data[8]);
+
                 rep.Model="Ozner RO";
                 rep.MainbroadPlatform= new String(Service_Data, 9, 3);
                 rep.MainbroadFirmware = new Date(Service_Data[12] + 2000 - 1900, Service_Data[13] - 1,

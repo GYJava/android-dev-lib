@@ -626,14 +626,14 @@ public class WifiPair {
             doPairFailure(new TimeoutException());
             return;
         }
-        /*if ((runPairCount % 3)==0)
+        if ((runPairCount % 3)==0)
         {
             runHandler.post(new MXChipPairImp());
         }else
         {
             runHandler.post(new AylaPairImp());
-        }*/
-        runHandler.post(new MXChipPairImp());
+        }
+        //runHandler.post(new MXChipPairImp());
         runPairCount++;
 
     }

@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.ProviderInfo;
 
 import com.ozner.XObject;
 import com.ozner.util.Helper;
@@ -13,7 +12,6 @@ import com.ozner.util.dbg;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Hashtable;
-import java.util.List;
 
 /**
  * @author zhiyongxu
@@ -274,7 +272,7 @@ public abstract class OznerDevice extends XObject {
         if (deviceIO != null) {
             deviceIO.open();
             if (deviceIO.isReady()) {
-                deviceIO.reCallDoReadly();
+                deviceIO.reCallDoReady();
             }
         } else {
             glb_timerLoop.removeDevice(this);

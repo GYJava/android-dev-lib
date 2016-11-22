@@ -168,14 +168,14 @@ public class BluetoothScan extends XObject {
                         {
                             case GAP_ADTYPE_MANUFACTURER_SPECIFIC:
                                 manufacturer_specific = Arrays.copyOfRange(scanRecord,
-                                        pos+1 , pos + len-1);
+                                        pos+1 , pos+len);
                                 break;
                             case GAP_ADTYPE_SERVICE_DATA:
                             {
-                                int uuid= (short)(scanRecord[pos+2]<<16)+scanRecord[pos+1];
+                                int uuid= (short)(scanRecord[pos]<<16)+scanRecord[pos+1];
                                 if (uuid==Service_UUID)
                                 {
-                                    service_data = Arrays.copyOfRange(scanRecord, pos + 3, pos + len-1);
+                                    service_data = Arrays.copyOfRange(scanRecord, pos+3 , pos + len);
                                 }
                             }
                             break;
